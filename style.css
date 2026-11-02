@@ -16,7 +16,7 @@ nav a:hover{color:var(--ink)}
 .hero p{font-size:19px;color:var(--muted);margin:0;max-width:560px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:16px 0}
 .app{display:flex;gap:16px;align-items:center;text-decoration:none;color:inherit}
-.app .icon{width:64px;height:64px;border-radius:16px;flex:none;background:linear-gradient(135deg,#6B38FF,#ED40A1,#FF8C3D);display:grid;place-items:center;color:#fff;font-size:30px}
+.app .icon{object-fit:cover;width:64px;height:64px;border-radius:16px;flex:none;background:linear-gradient(135deg,#6B38FF,#ED40A1,#FF8C3D);display:grid;place-items:center;color:#fff;font-size:30px}
 .app h3{margin:0 0 2px;font-size:19px}
 .app p{margin:0;color:var(--muted);font-size:15px}
 .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:15px}
