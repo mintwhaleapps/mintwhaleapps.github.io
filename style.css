@@ -1,0 +1,31 @@
+:root{--bg:#F6FBFA;--card:#fff;--ink:#0F2A2B;--muted:#5B7173;--mint:#14B8A6;--mint-dark:#0E8F84;--line:#E2EEEC}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1617;--card:#132324;--ink:#E7F3F2;--muted:#9DB4B3;--mint:#2DD4BF;--mint-dark:#5EEAD4;--line:#1F3537}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--mint-dark)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header.top{padding:22px 0}
+header.top .wrap{display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:20px;letter-spacing:-.01em}
+.brand img{width:36px;height:36px}
+nav{margin-left:auto;display:flex;gap:16px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:48px 0 24px}
+.hero h1{font-size:clamp(32px,6vw,48px);line-height:1.1;letter-spacing:-.02em;margin:0 0 12px}
+.hero p{font-size:19px;color:var(--muted);margin:0;max-width:560px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:16px 0}
+.app{display:flex;gap:16px;align-items:center;text-decoration:none;color:inherit}
+.app .icon{width:64px;height:64px;border-radius:16px;flex:none;background:linear-gradient(135deg,#6B38FF,#ED40A1,#FF8C3D);display:grid;place-items:center;color:#fff;font-size:30px}
+.app h3{margin:0 0 2px;font-size:19px}
+.app p{margin:0;color:var(--muted);font-size:15px}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:15px}
+h2{font-size:22px;letter-spacing:-.01em;margin:32px 0 8px}
+h3{font-size:17px;margin:20px 0 4px}
+.muted{color:var(--muted)}
+.pill{display:inline-block;background:color-mix(in srgb,var(--mint) 15%,transparent);color:var(--mint-dark);font-weight:600;font-size:13px;padding:4px 10px;border-radius:99px}
+.btn{display:inline-block;background:var(--mint);color:#fff;text-decoration:none;font-weight:600;padding:12px 20px;border-radius:99px}
+details{border-top:1px solid var(--line);padding:12px 0}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:600}
+footer{padding:40px 0;color:var(--muted);font-size:14px}
