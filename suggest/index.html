@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggest a feature — Mintwhale</title>
+<meta name="description" content="Suggest a new feature or improvement for a Mintwhale app.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../"><img src="../logo.svg" alt="">Mintwhale</a>
+<nav><a href="../#apps">Apps</a><a href="mailto:mintwhale.apps@gmail.com">Contact</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<h1>Suggest a feature</h1>
+<p>What would make our apps better for you? New features, improvements, anything. We read every idea.</p>
+</section>
+<form class="card" id="idea" onsubmit="return sendIdea(event)">
+<label>Which app?
+<select id="app" required>
+<option value="Gigabye">Gigabye</option>
+<option value="Mintwhale (general)">Something else / all apps</option>
+</select></label>
+<label>What kind of idea?
+<select id="kind">
+<option>New feature</option>
+<option>Improvement to something that exists</option>
+<option>Something else</option>
+</select></label>
+<label>Your idea
+<textarea id="msg" rows="6" required placeholder="Describe what you'd like to see and why it would help you."></textarea></label>
+<label>Your name <span class="muted">(optional)</span>
+<input id="name" type="text" autocomplete="name"></label>
+<button class="btn" type="submit">Send suggestion</button>
+<p class="muted" style="font-size:14px;margin-bottom:0">This opens your email app with your suggestion filled in, addressed to <strong>mintwhale.apps@gmail.com</strong>. Just tap Send. We only use what you send to reply and improve our apps.</p>
+</form>
+<script>
+(function(){var a=new URLSearchParams(location.search).get('app');if(a){var s=document.getElementById('app');for(var i=0;i<s.options.length;i++){if(s.options[i].value.toLowerCase()===a.toLowerCase()){s.selectedIndex=i;}}}})();
+function sendIdea(e){e.preventDefault();
+var app=document.getElementById('app').value,kind=document.getElementById('kind').value,msg=document.getElementById('msg').value.trim(),name=document.getElementById('name').value.trim();
+var subject='['+app+'] '+kind;
+var body='App: '+app+'\nType: '+kind+'\n\n'+msg+(name?'\n\n— '+name:'');
+location.href='mailto:mintwhale.apps@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+return false;}
+</script>
+</main>
+<footer><div class="wrap">© 2026 Mintwhale · <a href="mailto:mintwhale.apps@gmail.com">mintwhale.apps@gmail.com</a></div></footer>
+</body>
+</html>
